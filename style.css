@@ -1,0 +1,490 @@
+body {
+    background-color: rgb(255, 224, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 25px;
+}
+
+
+header {
+    height: 40px;
+    width: auto;
+    background: linear-gradient(to right, rgb(253, 221, 226), rgb(247, 170, 183), rgb(255, 167, 182));
+    
+    
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 70px;
+    height: 40px;  
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 13px;    
+}
+
+
+.container a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    transition: 255ms;
+}
+
+.container a:hover {
+    color: rgb(215, 172, 255);
+}
+
+.container a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 255ms ease-in;
+}
+
+.container a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+span {
+    color: rgb(116, 172, 255);
+}
+
+.content {
+    position: relative;
+}
+
+
+.twice{
+    height: 560px;
+    width: 100%;
+}
+
+.twice-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6 );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .25s;
+}
+
+.twice-overlay > * {
+    transform: translateY(20px);
+    transition: .25s;
+}
+
+.twice-overlay:hover {
+    opacity: 1;
+}
+
+.twice-overlay:hover > * {
+    transform: translateY(0);
+}
+
+.twice-title {
+    font-size: 2em;
+}
+
+.twice-description{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.twice-members {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    font-size: 2.5em;
+    background: linear-gradient(to left,#ffe3ba, rgb(255, 91, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.twice-members :is(h1) {
+    margin-bottom: 0;
+    
+}
+
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.members {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.jihyo {
+    background-color: rgb(255, 231, 187);
+    border-radius: 10px;
+    display: flex;
+    font-weight: bolder;
+    box-shadow: 0 0 5px;
+    
+}
+
+.jihyo :is(h3, p) {
+    padding-left: 10px;
+}
+
+.jihyo ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.jihyo ul li::before{
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+}
+
+.jihyo-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+    
+    
+}
+
+.jihyo-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.nayeon {
+    background-color: skyblue;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 5px;
+}
+
+.nayeon :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.nayeon ul li {
+    display: block;
+    font-weight: bolder;
+
+}
+.nayeon ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+}
+.nayeon-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+
+.nayeon-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.momo {
+    background-color: pink;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 5px;
+    
+}
+.momo :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+.momo ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.momo ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+.momo-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+
+.momo-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.mina {
+    background-color: rgb(185, 255, 220);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 5px;
+}
+
+.mina :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.mina ul li {
+    display: block;
+    font-weight: bolder;
+}
+.mina ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+
+.mina-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.mina-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.sana {
+    background-color: rgb(165, 1, 165);
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    display: flex;
+}
+
+.sana :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.sana ul li {
+    display: block;
+    font-weight: bolder;
+}
+.sana ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+.sana-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.sana-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.dahyun {
+    background-color: rgb(238, 236, 236);
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    display: flex;
+}
+
+.dahyun :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.dahyun ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.dahyun ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+
+.dahyun-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.dahyun-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.tzuyu {
+    background-color: rgb(83, 83, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    display: flex;
+}
+
+
+.tzuyu :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.tzuyu ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.tzuyu ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+
+
+.tzuyu-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.tzuyu-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.jeongyeon {
+    background-color: yellowgreen;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    display: flex;
+}
+
+
+.jeongyeon :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.jeongyeon ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.jeongyeon ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+
+
+.jeongyeon-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.jeongyeon-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
+
+.chaeyeong {
+    background-color: red;
+    border-radius: 10px;
+    box-shadow: 0 0 5px;
+    display: flex;
+}
+
+
+.chaeyeong :is(h3, p) {
+    font-weight: bolder;
+    padding-left: 10px;
+}
+
+.chaeyeong ul li {
+    display: block;
+    font-weight: bolder;
+}
+
+.chaeyeong ul li::before {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+
+}
+
+.chaeyeong-img {
+    height: 500px;
+    width: 300px;
+    transition: transform .25s ease-in;
+    transition: .25s;
+    border-radius: 10px;
+}
+.chaeyeong-img:hover {
+    box-shadow: 0 0px 10px 2px black;
+    transform: scale(1.01);
+}
